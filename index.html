@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante de Mariscos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <h2>Menú</h2>
+            <nav>
+                <ul>
+                    <li><a href="?tabla=clientes">Clientes</a></li>
+                    <li><a href="?tabla=pedidos">Pedidos</a></li>
+                    <li><a href="?tabla=menu">Menú</a></li>
+                    <li><a href="?tabla=proveedores">Proveedores</a></li>
+                    <li><a href="?tabla=inventario">Inventario</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section>
+            <header>
+                <h1>Restaurante de Mariscos</h1>
+            </header>
+
+            <main>
+                
+
+                        <form action='acciones.php' method='POST'>";
+                        <input type='hidden' name='tabla' value='$tabla'>";
+                        <input type='hidden' name='accion' value='actualizar'>";
+                        <input type='hidden' name='id' value='$id'>";
+
+                          <input type='text' name='nombre' value='{$registro['nombre']}'><br>";
+                            <input type='text' name='telefono' value='{$registro['telefono']}'><br>";
+                         <input type='number' name='subtotal' value='{$registro['subtotal']}'><br>";
+                        <input type='number' name='iva' value='{$registro['iva']}'><br>";
+                        
+                        <button type='submit'>Guardar Cambios</button>";
+                        </form>";
+                    
+                                <td>
+                                        <form action='index.php' method='GET' style='display:inline-block;'>
+                                            <input type='hidden' name='id' value='{$fila['id_cliente']}'>
+                                            <input type='hidden' name='tabla' value='$tabla'>
+                                            <button type='submit' name='accion' value='actualizar'>Actualizar</button>
+                                        </form>
+                                        <form action='acciones.php' method='POST' style='display:inline-block;'>
+                                            <input type='hidden' name='id' value='{$fila['id_cliente']}'>
+                                            <input type='hidden' name='tabla' value='$tabla'>
+                                            <button type='submit' name='accion' value='eliminar'>Eliminar</button>
+                                        </form>
+                                    "</td>";
+                                "</tr>";
+                            }
+                            </tbody></table>";
+                         "<p>No hay registros en la tabla $tabla.</p>";
+                        
+                    
+                <p>Selecciona una tabla para gestionar sus registros.</p>";
+                
+            </main>
+        </section>
+    </div>
+</body>
+</html>
